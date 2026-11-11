@@ -204,7 +204,7 @@
   <div class="card">
     <div class="app-icon">📅</div>
     <h1>워크플래너</h1>
-    <span class="version">최신 버전 v0.55 (Android)</span>
+    <span class="version">최신 버전 v0.56 (Android)</span>
     
     <p class="desc">
       공직자 출장 및 업무관리시스템으로<br>
@@ -212,13 +212,13 @@
     </p>
 
     <ul class="features">
-      <li>작업 주기 및 출장비 정밀 관리</li>
+      <li><b>[NEW]</b> 통합 키워드 검색 및 해당 날짜 즉시 이동</li>
+      <li>출장비 정밀 산출 및 작업 주기 체계적 관리</li>
       <li>안전한 JSON 데이터 백업 및 복원 지원</li>
-      <li>모바일 환경에 최적화된 인터페이스</li>
     </ul>
 
-    <!-- 깃허브 Releases 다운로드 링크 -->
-    <a href="https://github.com/winmo6-blip/office-note/releases/download/v0.55/work_note.apk" class="download-btn">
+    <!-- 깃허브 Releases v0.56 다운로드 링크 -->
+    <a href="https://github.com/winmo6-blip/office-note/releases/download/v0.56/work_note.apk" class="download-btn">
       📥 앱 설치 파일(APK) 다운로드
     </a>
 
@@ -227,24 +227,29 @@
 
     <!-- 디테일한 사용 설명서 내용 -->
     <div id="manualContent" class="manual-box">
-      <h3>📌 워크플래너 v0.55 상세 매뉴얼</h3>
+      <h3>📌 워크플래너 v0.56 상세 매뉴얼</h3>
       
-      <h4>1. 출장비 및 일정 관리</h4>
+      <h4>1. 통합 키워드 검색 (v0.56 신규)</h4>
+      <ul>
+        <li>상단 통계 바의 <b>돋보기(🔍) 아이콘</b>을 눌러 최근 1개월부터 전체 기간까지 범위를 설정해 검색할 수 있습니다.</li>
+        <li>출장 구분, 메모, 할 일 등 기록된 키워드를 입력하면 검색된 해당 날짜로 즉시 이동합니다.</li>
+      </ul>
+
+      <h4>2. 출장비 및 일정 관리</h4>
       <ul>
         <li>날짜별 출장 내역 및 관련 비용을 항목별로 정밀하게 입력하고 산출할 수 있습니다.</li>
         <li>반복되는 작업 주기를 체계적으로 등록하여 누락 없이 일정을 관리할 수 있습니다.</li>
       </ul>
 
-      <h4>2. 데이터 백업 및 복원</h4>
+      <h4>3. 데이터 백업 및 복원</h4>
       <ul>
         <li>앱 설정 메뉴에서 안전한 <b>JSON 파일 형식</b>으로 데이터 백업본을 생성할 수 있습니다.</li>
         <li>기기 변경이나 데이터 유실 시 백업 파일을 불러와 완벽하게 복원할 수 있습니다.</li>
       </ul>
 
-      <h4>3. 화면 및 디스플레이 최적화</h4>
+      <h4>4. 화면 및 디스플레이 최적화</h4>
       <ul>
         <li>스마트폰 화면 설정에서 글씨 크기를 <b>4pt 이하</b>로 조절해야 표와 버튼 배치가 가장 안정적으로 표시됩니다.</li>
-        <li>터치 오작동 방지 및 모바일 가독성을 높인 레이아웃을 제공합니다.</li>
       </ul>
     </div>
 
@@ -273,13 +278,12 @@
   <script>
     // 페이지가 열리자마자 비밀번호를 물어보는 보안 장치
     window.onload = function() {
-      // 설정하고 싶은 비밀번호 (원하시는 숫자로 변경 가능합니다)
-      const correctPassword = "windowsho"; 
+      const correctPassword = "2026"; 
       const inputPassword = prompt("워크플래너 다운로드 페이지입니다.\n접속 비밀번호를 입력해주세요:");
       
       if (inputPassword !== correctPassword) {
         alert("비밀번호가 일치하지 않습니다. 메인 화면으로 돌아갑니다.");
-        window.location.href = "about:blank"; // 틀리면 빈 페이지로 이동
+        window.location.href = "about:blank";
       }
     };
 
