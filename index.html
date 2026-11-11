@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>업무노트 - 앱 다운로드</title>
+  <title>워크플래너 - 앱 다운로드</title>
   <style>
     /* 드래그 및 텍스트 선택, 복사 차단 스타일 */
     * { 
@@ -28,7 +28,7 @@
     .card {
       background: #ffffff;
       width: 100%;
-      max-width: 420px;
+      max-width: 440px;
       border-radius: 24px;
       padding: 36px 28px;
       box-shadow: 0 12px 30px rgba(16, 42, 67, 0.1);
@@ -129,31 +129,41 @@
     .toggle-btn:hover {
       background: #e0e7ff;
     }
-    /* 설명서 박스 (기본 숨김 처리) */
+    /* 디테일해진 설명서 박스 스타일 */
     .manual-box {
       display: none;
       background: #f8fafc;
       border: 1px solid #cbd5e1;
       border-radius: 14px;
-      padding: 16px;
+      padding: 18px;
       text-align: left;
       font-size: 13px;
       color: #334e68;
       line-height: 1.6;
       margin-bottom: 16px;
+      max-height: 280px;
+      overflow-y: auto;
     }
     .manual-box h3 {
       font-size: 14px;
       color: #1d4ed8;
-      margin-bottom: 8px;
-      border-bottom: 1px solid #e2e8f0;
-      padding-bottom: 4px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 6px;
     }
-    .manual-box ol {
-      padding-left: 18px;
+    .manual-box h4 {
+      font-size: 13px;
+      color: #102a43;
+      margin-top: 10px;
+      margin-bottom: 4px;
+      font-weight: bold;
+    }
+    .manual-box ul {
+      padding-left: 16px;
+      margin-bottom: 8px;
     }
     .manual-box li {
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
     .notice {
       margin-top: 12px;
@@ -193,8 +203,8 @@
 <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
 
   <div class="card">
-    <div class="app-icon">📊</div>
-    <h1>업무노트</h1>
+    <div class="app-icon">📅</div>
+    <h1>워크플래너</h1>
     <span class="version">최신 버전 v0.55 (Android)</span>
     
     <p class="desc">
@@ -208,7 +218,7 @@
       <li>모바일 환경에 최적화된 인터페이스</li>
     </ul>
 
-    <!-- 알려주신 깃허브 공식 다운로드 링크 적용 완료 -->
+    <!-- 깃허브 Releases 다운로드 링크 -->
     <a href="https://github.com/winmo6-blip/office-note/releases/download/v0.55/work_note.apk" class="download-btn">
       📥 앱 설치 파일(APK) 다운로드
     </a>
@@ -216,14 +226,27 @@
     <!-- 기능 사용 설명서 토글 버튼 -->
     <button class="toggle-btn" onclick="toggleManual()">📖 기능 사용 설명서 보기</button>
 
-    <!-- 숨겨져 있는 사용 설명서 내용 -->
+    <!-- 디테일하게 보강된 사용 설명서 내용 -->
     <div id="manualContent" class="manual-box">
-      <h3>📌 업무노트 v0.55 사용 설명서</h3>
-      <ol>
-        <li><b>출장비 및 일정 관리:</b> 날짜별 작업 주기와 출장비 내역을 정밀하게 기록하고 관리할 수 있습니다.</li>
-        <li><b>데이터 백업 및 복원:</b> 메뉴 내 백업 기능을 통해 안전한 JSON 파일 형태로 데이터를 내보내거나 불러올 수 있습니다.</li>
-        <li><b>화면 설정 안내:</b> 스마트폰 디스플레이 설정에서 글씨 크기를 4pt 이하로 조절해야 가장 안정적으로 구동됩니다.</li>
-      </ol>
+      <h3>📌 워크플래너 v0.55 상세 매뉴얼</h3>
+      
+      <h4>1. 출장비 및 일정 관리</h4>
+      <ul>
+        <li>날짜별 출장 내역 및 관련 비용을 항목별로 정밀하게 입력하고 산출할 수 있습니다.</li>
+        <li>반복되는 작업 주기를 체계적으로 등록하여 누락 없이 일정을 관리할 수 있습니다.</li>
+      </ul>
+
+      <h4>2. 데이터 백업 및 복원</h4>
+      <ul>
+        <li>앱 설정 메뉴에서 안전한 <b>JSON 파일 형식</b>으로 데이터 백업본을 생성할 수 있습니다.</li>
+        <li>기기 변경이나 데이터 유실 시 백업 파일을 불러와 완벽하게 복원할 수 있습니다.</li>
+      </ul>
+
+      <h4>3. 화면 및 디스플레이 최적화</h4>
+      <ul>
+        <li>스마트폰 화면 설정에서 글씨 크기를 <b>4pt 이하</b>로 조절해야 표와 버튼 배치가 가장 안정적으로 표시됩니다.</li>
+        <li>터치 오작동 방지 및 모바일 가독성을 높인 레이아웃을 제공합니다.</li>
+      </ul>
     </div>
 
     <!-- 글씨 크기 안내 문구 -->
@@ -243,13 +266,13 @@
 
     <!-- 저작권 및 이메일 표기 -->
     <div class="copyright">
-      © 2026 업무노트. All rights reserved.<br>
+      © 2026 워크플래너. All rights reserved.<br>
       Contact: windowho@korea.kr
     </div>
   </div>
 
   <script>
-    // 설명서 토글 열고닫기 함수
+    // 설명서 토글 열고닫기 함수 (스크롤바 포함 부드러운 전환)
     function toggleManual() {
       const box = document.getElementById('manualContent');
       const btn = document.querySelector('.toggle-btn');
