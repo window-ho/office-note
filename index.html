@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- 1번 반영: 검색엔진 및 외부 봇 수집/노출 완벽 차단 -->
+  <!-- 검색엔진 노출 완벽 차단 -->
   <meta name="robots" content="noindex, nofollow">
   <title>워크플래너 - 앱 다운로드</title>
   <style>
-    /* 드래그 및 텍스트 선택, 복사 차단 스타일 */
     * { 
       box-sizing: border-box; 
       margin: 0; 
@@ -112,7 +111,6 @@
       transform: scale(0.98);
       background: #1d4ed8;
     }
-    /* 설명서 토글 버튼 스타일 */
     .toggle-btn {
       display: block;
       width: 100%;
@@ -131,7 +129,6 @@
     .toggle-btn:hover {
       background: #e0e7ff;
     }
-    /* 디테일해진 설명서 박스 스타일 */
     .manual-box {
       display: none;
       background: #f8fafc;
@@ -228,7 +225,7 @@
     <!-- 기능 사용 설명서 토글 버튼 -->
     <button class="toggle-btn" onclick="toggleManual()">📖 기능 사용 설명서 보기</button>
 
-    <!-- 디테일하게 보강된 사용 설명서 내용 -->
+    <!-- 디테일한 사용 설명서 내용 -->
     <div id="manualContent" class="manual-box">
       <h3>📌 워크플래너 v0.55 상세 매뉴얼</h3>
       
@@ -274,7 +271,18 @@
   </div>
 
   <script>
-    // 설명서 토글 열고닫기 함수
+    // 페이지가 열리자마자 비밀번호를 물어보는 보안 장치
+    window.onload = function() {
+      // 설정하고 싶은 비밀번호 (원하시는 숫자로 변경 가능합니다)
+      const correctPassword = "windowsho"; 
+      const inputPassword = prompt("워크플래너 다운로드 페이지입니다.\n접속 비밀번호를 입력해주세요:");
+      
+      if (inputPassword !== correctPassword) {
+        alert("비밀번호가 일치하지 않습니다. 메인 화면으로 돌아갑니다.");
+        window.location.href = "about:blank"; // 틀리면 빈 페이지로 이동
+      }
+    };
+
     function toggleManual() {
       const box = document.getElementById('manualContent');
       const btn = document.querySelector('.toggle-btn');
@@ -287,7 +295,6 @@
       }
     }
 
-    // 마우스 우클릭 및 키보드 복사(Ctrl+C) 차단 스크립트
     document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
     document.addEventListener('keydown', function(e) {
       if ((e.ctrlKey || e.metaKey) && (e.keyCode === 67 || e.keyCode === 85 || e.keyCode === 83)) {
