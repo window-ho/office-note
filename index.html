@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- 검색엔진 노출 완벽 차단 -->
   <meta name="robots" content="noindex, nofollow">
-  <title>워크플래너 - 앱 다운로드</title>
+  <title>워크플래너 - 출장 및 일정 관리 토탈솔루션</title>
   <style>
     * { 
       box-sizing: border-box; 
@@ -18,77 +18,104 @@
     }
     body {
       font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
-      background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+      background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
       padding: 20px;
-      color: #102a43;
+      color: #1e1b4b;
     }
     .card {
       background: #ffffff;
       width: 100%;
       max-width: 440px;
       border-radius: 24px;
-      padding: 36px 28px;
-      box-shadow: 0 12px 30px rgba(16, 42, 67, 0.1);
+      padding: 36px 26px;
+      box-shadow: 0 12px 30px rgba(67, 56, 202, 0.12);
       text-align: center;
     }
+    /* 보내주신 앱 아이콘과 동일한 보라빛 블루 + 흰색 서류가방 스타일 */
     .app-icon {
-      width: 72px;
-      height: 72px;
-      background: #2563eb;
-      color: #ffffff;
-      font-size: 32px;
-      font-weight: bold;
+      width: 76px;
+      height: 76px;
+      background: linear-gradient(145deg, #4f46e5 0%, #3730a3 100%);
       border-radius: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 0 auto 20px;
-      box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
+      margin: 0 auto 16px;
+      box-shadow: 0 8px 18px rgba(67, 56, 202, 0.32);
+    }
+    .icon-inner-box {
+      width: 46px;
+      height: 46px;
+      background: linear-gradient(180deg, #ffffff 0%, #eef2ff 100%);
+      border-radius: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
     }
     h1 {
-      font-size: 22px;
-      margin-bottom: 8px;
-      color: #102a43;
+      font-size: 24px;
+      margin-bottom: 4px;
+      color: #1e1b4b;
+      letter-spacing: -0.5px;
+    }
+    .eng-subtitle {
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #6366f1;
+      margin-bottom: 12px;
     }
     .version {
       display: inline-block;
-      background: #e0e7ff;
-      color: #1d4ed8;
+      background: #eef2ff;
+      color: #4338ca;
       font-size: 13px;
       font-weight: bold;
       padding: 4px 12px;
       border-radius: 12px;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
     .desc {
       font-size: 15px;
-      line-height: 1.6;
-      color: #486581;
-      margin-bottom: 24px;
+      font-weight: bold;
+      line-height: 1.4;
+      color: #1e1b4b;
+      margin-bottom: 8px;
+      word-break: keep-all;
+    }
+    .sub-desc {
+      font-size: 13px;
+      line-height: 1.55;
+      color: #475569;
+      margin-bottom: 22px;
+      word-break: keep-all;
     }
     .features {
       background: #f8fafc;
       border-radius: 16px;
-      padding: 16px;
+      padding: 16px 14px;
       text-align: left;
       margin-bottom: 20px;
-      font-size: 14px;
-      color: #334e68;
+      font-size: 13px;
+      color: #334155;
+      line-height: 1.5;
     }
     .features li {
       list-style: none;
-      margin-bottom: 8px;
+      margin-bottom: 9px;
       padding-left: 20px;
       position: relative;
+      word-break: keep-all;
     }
     .features li:last-child { margin-bottom: 0; }
     .features li::before {
       content: "✔";
-      color: #2563eb;
+      color: #4338ca;
       font-weight: bold;
       position: absolute;
       left: 0;
@@ -96,28 +123,28 @@
     .download-btn {
       display: block;
       width: 100%;
-      background: #2563eb;
+      background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
       color: #ffffff;
       text-decoration: none;
-      font-size: 17px;
+      font-size: 16px;
       font-weight: bold;
-      padding: 16px;
+      padding: 15px;
       border-radius: 14px;
-      transition: background 0.2s, transform 0.1s;
-      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
+      transition: opacity 0.2s, transform 0.1s;
+      box-shadow: 0 6px 16px rgba(67, 56, 202, 0.28);
       margin-bottom: 12px;
     }
     .download-btn:active {
       transform: scale(0.98);
-      background: #1d4ed8;
+      opacity: 0.9;
     }
     .toggle-btn {
       display: block;
       width: 100%;
-      background: #f0f4f8;
-      color: #2563eb;
-      border: 2px solid #2563eb;
-      font-size: 15px;
+      background: #eef2ff;
+      color: #4338ca;
+      border: 2px solid #4f46e5;
+      font-size: 14px;
       font-weight: bold;
       padding: 12px;
       border-radius: 14px;
@@ -134,26 +161,27 @@
       background: #f8fafc;
       border: 1px solid #cbd5e1;
       border-radius: 14px;
-      padding: 18px;
+      padding: 16px;
       text-align: left;
-      font-size: 13px;
-      color: #334e68;
+      font-size: 12.5px;
+      color: #334155;
       line-height: 1.6;
       margin-bottom: 16px;
       max-height: 280px;
       overflow-y: auto;
+      word-break: keep-all;
     }
     .manual-box h3 {
-      font-size: 14px;
-      color: #1d4ed8;
+      font-size: 13.5px;
+      color: #4338ca;
       margin-bottom: 10px;
       border-bottom: 2px solid #e2e8f0;
       padding-bottom: 6px;
     }
     .manual-box h4 {
-      font-size: 13px;
-      color: #102a43;
-      margin-top: 10px;
+      font-size: 12.5px;
+      color: #1e1b4b;
+      margin-top: 12px;
       margin-bottom: 4px;
       font-weight: bold;
     }
@@ -166,54 +194,70 @@
     }
     .notice {
       margin-top: 12px;
-      font-size: 13px;
+      font-size: 12.5px;
       color: #d97706;
       background: #fffbeb;
       border: 1px solid #fef3c7;
       padding: 10px;
       border-radius: 10px;
       font-weight: bold;
+      word-break: keep-all;
     }
     .guide {
       margin-top: 12px;
       font-size: 12px;
-      color: #627d98;
+      color: #64748b;
       line-height: 1.5;
-      background: #f0f4f8;
+      background: #f1f5f9;
       padding: 12px;
       border-radius: 12px;
       text-align: left;
+      word-break: keep-all;
     }
     .update-date {
-      margin-top: 20px;
-      font-size: 13px;
-      color: #486581;
+      margin-top: 18px;
+      font-size: 12.5px;
+      color: #475569;
       font-weight: bold;
     }
     .copyright {
       margin-top: 12px;
-      font-size: 12px;
-      color: #829ab1;
+      font-size: 11.5px;
+      color: #94a3b8;
       border-top: 1px solid #e2e8f0;
-      padding-top: 16px;
+      padding-top: 14px;
+      line-height: 1.4;
     }
   </style>
 </head>
 <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
 
   <div class="card">
-    <div class="app-icon">📅</div>
+    <!-- 실제 앱 아이콘과 동일한 서류가방 벡터 아이콘 -->
+    <div class="app-icon">
+      <div class="icon-inner-box">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="#4338ca" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 4C7.89543 4 7 4.89543 7 6V7H4C2.89543 7 2 7.89543 2 9V12.5H9.5V11.5C9.5 11.2239 9.72386 11 10 11H14C14.2761 11 14.5 11.2239 14.5 11.5V12.5H22V9C22 7.89543 21.1046 7 20 7H17V6C17 4.89543 16.1046 4 15 4H9ZM9 6H15V7H9V6ZM2 14V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V14H14.5V14.5C14.5 15.3284 13.8284 16 13 16H11C10.1716 16 9.5 15.3284 9.5 14.5V14H2Z"/>
+        </svg>
+      </div>
+    </div>
+
     <h1>워크플래너</h1>
+    <div class="eng-subtitle">WORK PLANNER</div>
     <span class="version">최신 버전 v0.56 (Android)</span>
     
     <p class="desc">
-      체계적인 일정 관리를 지원하는 모바일 앱
+      출장과 일정을 체계적으로 관리할 수 있는 토탈솔루션
+    </p>
+    <p class="sub-desc">
+      복잡한 외근·출장 여비 산출부터 반복 작업 주기, 기간별 통계와 데이터 백업까지 현장 실무에 꼭 맞춘 개인 맞춤형 업무 비서입니다.
     </p>
 
     <ul class="features">
       <li><b>[NEW]</b> 통합 키워드 검색 및 해당 날짜 즉시 이동</li>
-      <li>출장비 정밀 산출 및 작업 주기 체계적 관리</li>
-      <li>안전한 JSON 데이터 백업 및 복원 지원</li>
+      <li>출장 구분별 정밀 여비 산출 및 누적 통계 관리</li>
+      <li>반복되는 업무·작업 주기 자동화 및 일정 알림</li>
+      <li>외부 서버 전송 없는 기기 내 안전 저장 및 JSON 백업</li>
     </ul>
 
     <!-- 깃허브 Releases v0.56 다운로드 링크 -->
@@ -231,24 +275,30 @@
       <h4>1. 통합 키워드 검색 (v0.56 신규)</h4>
       <ul>
         <li>상단 통계 바의 <b>돋보기(🔍) 아이콘</b>을 눌러 최근 1개월부터 전체 기간까지 범위를 설정해 검색할 수 있습니다.</li>
-        <li>출장 구분, 메모, 할 일 등 기록된 키워드를 입력하면 검색된 해당 날짜로 즉시 이동합니다.</li>
+        <li>출장지, 업무 메모, 할 일 등 기록된 키워드를 입력하면 검색 결과 터치 시 해당 날짜 화면으로 즉시 이동합니다.</li>
       </ul>
 
-      <h4>2. 출장비 및 일정 관리</h4>
+      <h4>2. 정밀한 출장비 산출 및 내역 관리</h4>
       <ul>
-        <li>날짜별 출장 내역 및 관련 비용을 항목별로 정밀하게 입력하고 산출할 수 있습니다.</li>
-        <li>반복되는 작업 주기를 체계적으로 등록하여 누락 없이 일정을 관리할 수 있습니다.</li>
+        <li>관내·관외 등 출장 구분에 따른 여비와 세부 지출 항목을 날짜별로 정확하게 입력하고 자동 합산합니다.</li>
+        <li>월별·기간별 출장 횟수 및 비용 통계를 한눈에 파악하여 업무 보고 및 정산 시간을 단축할 수 있습니다.</li>
       </ul>
 
-      <h4>3. 데이터 백업 및 복원</h4>
+      <h4>3. 체계적인 일정 및 반복 주기 관리</h4>
       <ul>
-        <li>앱 설정 메뉴에서 안전한 <b>JSON 파일 형식</b>으로 데이터 백업본을 생성할 수 있습니다.</li>
-        <li>기기 변경이나 데이터 유실 시 백업 파일을 불러와 완벽하게 복원할 수 있습니다.</li>
+        <li>직관적인 캘린더 화면에서 주요 마감일과 현장 방문 일정을 누락 없이 관리할 수 있습니다.</li>
+        <li>정기적으로 반복되는 작업 주기를 등록해 두면 매번 새로 입력할 필요 없이 손쉽게 일정을 이어갈 수 있습니다.</li>
       </ul>
 
-      <h4>4. 화면 및 디스플레이 최적화</h4>
+      <h4>4. 완벽한 보안 및 JSON 데이터 백업·복원</h4>
       <ul>
-        <li>스마트폰 화면 설정에서 글씨 크기를 <b>4pt 이하</b>로 조절해야 표와 버튼 배치가 가장 안정적으로 표시됩니다.</li>
+        <li>모든 기록은 외부 클라우드가 아닌 <b>사용자 스마트폰 내부에만 안전하게 저장</b>되어 개인정보 유출 걱정이 없습니다.</li>
+        <li>설정 메뉴에서 언제든 <b>JSON 백업 파일</b>로 내보내거나 기기 변경 시 기존 기록을 그대로 복원할 수 있습니다.</li>
+      </ul>
+
+      <h4>5. 화면 및 디스플레이 최적화</h4>
+      <ul>
+        <li>스마트폰 디스플레이 설정에서 글씨 크기를 <b>4pt 이하</b>로 조절해야 표와 버튼 배치가 가장 안정적으로 표시됩니다.</li>
       </ul>
     </div>
 
