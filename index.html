@@ -18,13 +18,13 @@
     }
     body {
       font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
-      background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+      background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
       padding: 20px;
-      color: #1e1b4b;
+      color: #102a43;
     }
     .card {
       background: #ffffff;
@@ -32,48 +32,41 @@
       max-width: 440px;
       border-radius: 24px;
       padding: 36px 26px;
-      box-shadow: 0 12px 30px rgba(67, 56, 202, 0.12);
+      box-shadow: 0 12px 30px rgba(16, 42, 67, 0.1);
       text-align: center;
     }
-    /* 보내주신 앱 아이콘과 동일한 보라빛 블루 + 흰색 서류가방 스타일 */
+    /* 파란색 배경 + 흰색 둥근 박스 안 서류가방 아이콘 */
     .app-icon {
-      width: 76px;
-      height: 76px;
-      background: linear-gradient(145deg, #4f46e5 0%, #3730a3 100%);
+      width: 72px;
+      height: 72px;
+      background: #2563eb;
       border-radius: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 0 auto 16px;
-      box-shadow: 0 8px 18px rgba(67, 56, 202, 0.32);
+      margin: 0 auto 18px;
+      box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
     }
     .icon-inner-box {
-      width: 46px;
-      height: 46px;
-      background: linear-gradient(180deg, #ffffff 0%, #eef2ff 100%);
-      border-radius: 13px;
+      width: 44px;
+      height: 44px;
+      background: #ffffff;
+      border-radius: 12px;
       display: flex;
       justify-content: center;
       align-items: center;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
     h1 {
       font-size: 24px;
-      margin-bottom: 4px;
-      color: #1e1b4b;
+      margin-bottom: 8px;
+      color: #102a43;
       letter-spacing: -0.5px;
-    }
-    .eng-subtitle {
-      font-size: 11px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      color: #6366f1;
-      margin-bottom: 12px;
     }
     .version {
       display: inline-block;
-      background: #eef2ff;
-      color: #4338ca;
+      background: #e0e7ff;
+      color: #1d4ed8;
       font-size: 13px;
       font-weight: bold;
       padding: 4px 12px;
@@ -84,14 +77,14 @@
       font-size: 15px;
       font-weight: bold;
       line-height: 1.4;
-      color: #1e1b4b;
+      color: #102a43;
       margin-bottom: 8px;
       word-break: keep-all;
     }
     .sub-desc {
       font-size: 13px;
       line-height: 1.55;
-      color: #475569;
+      color: #486581;
       margin-bottom: 22px;
       word-break: keep-all;
     }
@@ -102,7 +95,7 @@
       text-align: left;
       margin-bottom: 20px;
       font-size: 13px;
-      color: #334155;
+      color: #334e68;
       line-height: 1.5;
     }
     .features li {
@@ -115,7 +108,7 @@
     .features li:last-child { margin-bottom: 0; }
     .features li::before {
       content: "✔";
-      color: #4338ca;
+      color: #2563eb;
       font-weight: bold;
       position: absolute;
       left: 0;
@@ -123,27 +116,27 @@
     .download-btn {
       display: block;
       width: 100%;
-      background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+      background: #2563eb;
       color: #ffffff;
       text-decoration: none;
       font-size: 16px;
       font-weight: bold;
       padding: 15px;
       border-radius: 14px;
-      transition: opacity 0.2s, transform 0.1s;
-      box-shadow: 0 6px 16px rgba(67, 56, 202, 0.28);
+      transition: background 0.2s, transform 0.1s;
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
       margin-bottom: 12px;
     }
     .download-btn:active {
       transform: scale(0.98);
-      opacity: 0.9;
+      background: #1d4ed8;
     }
     .toggle-btn {
       display: block;
       width: 100%;
-      background: #eef2ff;
-      color: #4338ca;
-      border: 2px solid #4f46e5;
+      background: #f0f4f8;
+      color: #2563eb;
+      border: 2px solid #2563eb;
       font-size: 14px;
       font-weight: bold;
       padding: 12px;
@@ -164,7 +157,7 @@
       padding: 16px;
       text-align: left;
       font-size: 12.5px;
-      color: #334155;
+      color: #334e68;
       line-height: 1.6;
       margin-bottom: 16px;
       max-height: 280px;
@@ -173,14 +166,14 @@
     }
     .manual-box h3 {
       font-size: 13.5px;
-      color: #4338ca;
+      color: #1d4ed8;
       margin-bottom: 10px;
       border-bottom: 2px solid #e2e8f0;
       padding-bottom: 6px;
     }
     .manual-box h4 {
       font-size: 12.5px;
-      color: #1e1b4b;
+      color: #102a43;
       margin-top: 12px;
       margin-bottom: 4px;
       font-weight: bold;
@@ -206,9 +199,9 @@
     .guide {
       margin-top: 12px;
       font-size: 12px;
-      color: #64748b;
+      color: #627d98;
       line-height: 1.5;
-      background: #f1f5f9;
+      background: #f0f4f8;
       padding: 12px;
       border-radius: 12px;
       text-align: left;
@@ -217,13 +210,13 @@
     .update-date {
       margin-top: 18px;
       font-size: 12.5px;
-      color: #475569;
+      color: #486581;
       font-weight: bold;
     }
     .copyright {
       margin-top: 12px;
       font-size: 11.5px;
-      color: #94a3b8;
+      color: #829ab1;
       border-top: 1px solid #e2e8f0;
       padding-top: 14px;
       line-height: 1.4;
@@ -233,17 +226,16 @@
 <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
 
   <div class="card">
-    <!-- 실제 앱 아이콘과 동일한 서류가방 벡터 아이콘 -->
+    <!-- 서류가방(Briefcase) 앱 아이콘 -->
     <div class="app-icon">
       <div class="icon-inner-box">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="#4338ca" xmlns="http://www.w3.org/2000/svg">
+        <svg width="25" height="25" viewBox="0 0 24 24" fill="#2563eb" xmlns="http://www.w3.org/2000/svg">
           <path d="M9 4C7.89543 4 7 4.89543 7 6V7H4C2.89543 7 2 7.89543 2 9V12.5H9.5V11.5C9.5 11.2239 9.72386 11 10 11H14C14.2761 11 14.5 11.2239 14.5 11.5V12.5H22V9C22 7.89543 21.1046 7 20 7H17V6C17 4.89543 16.1046 4 15 4H9ZM9 6H15V7H9V6ZM2 14V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V14H14.5V14.5C14.5 15.3284 13.8284 16 13 16H11C10.1716 16 9.5 15.3284 9.5 14.5V14H2Z"/>
         </svg>
       </div>
     </div>
 
     <h1>워크플래너</h1>
-    <div class="eng-subtitle">WORK PLANNER</div>
     <span class="version">최신 버전 v0.56 (Android)</span>
     
     <p class="desc">
